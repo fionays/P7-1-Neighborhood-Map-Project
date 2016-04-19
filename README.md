@@ -1,7 +1,7 @@
 ## Neighborhood Map Project
 Udacity Front End Nanodegree Project7-1.
 
-Neighborhodd Map is a very cool single-page apllication which features a map with the 20 most popular places around your current neighborhood.
+Neighborhodd Map is a very cool single-page apllication which features a map with the top 20 most popular places around your current neighborhood. It is a responsive degine and works across modern desktop, tablet, and phone browers.
 
 
 ### Running this application

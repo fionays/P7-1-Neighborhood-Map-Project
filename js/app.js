@@ -2,12 +2,12 @@
 var map = map || {};
 
 // Variables used to make a explore request to FourSquare API
-var key= "YOUR_CLIENT_ID";
-var secret = "YOUR_SECRET";
+var key= "QDL2HZHN5Q1PEGZ4ORIGIDWOYKQ5FSBY1QJZCE0ZA14UUWZL";
+var secret = "U0ROAZOERED0AXOOMHAE5UG5P22AD2NRJM53HBBSNMEKM434";
 
 var latDefault = 40.7128;
 var lngDefault = -74.0059;
-var otherParams = "&section=food&limit=15&venuePhotos=1";
+var otherParams = "&section=food&limit=20&venuePhotos=1";
 var baseURL = "https://api.foursquare.com/v2/venues/explore?";
 
 /*
@@ -101,7 +101,7 @@ var ViewModel = function() {
 	};
 
 	// Use HTML5 geolocation to get the current location.
-	// And make an explore request to FourSquare API using that location
+	// And make an ajax request to FourSquare API using that location
 	if (navigator.geolocation) {
 
 		// callback function, called when HTTP GET request to Foursquare fails.

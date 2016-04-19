@@ -21,7 +21,7 @@
 			<a class="navmenu-brand" href="#">Neiborhood Map</a>
 			<input type="text" class="form-control" placeholder="Most Popular Places" id="filter" data-bind="value: filterText, valueUpdate: 'afterkeydown'" autofocus>
 			<ul class="nav navmenu-nav" id="main-nav" data-bind="foreach: filteredPlaces">
-				<li data-bind="text: name, event: {mouseover: showInfoWindow, mouseout: closeInfoWindow}"></li>
+				<li data-bind="text: name, click: showInfoWindow"></li>
 			</ul>
 		</div>
 

@@ -34,19 +34,19 @@ var Place = function(data) {
 		position: new google.maps.LatLng(self.lat, self.lng)
 	});
 
-	// Add event listener for the marker. Show the infoWindow when mouse over,
-	// and close it when mosue out.
-	self.marker.addListener("mouseover", function() {self.showInfoWindow()});
-	self.marker.addListener("mouseout", function() {self.closeInfoWindow()});
+	// Add event listener for the marker. Show the infoWindow when clicked.
+	self.marker.addListener("click", function() {self.showInfoWindow();});
 
 	self.showInfoWindow = function() {
+		// Bounce the marker at a limited period.
 		self.marker.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(function() {
+			self.marker.setAnimation(null);
+		}, 1500);
+
+		// Open the infowindow.
 		infoWindow.open(map, self.marker);
 	};
-	self.closeInfoWindow = function() {
-		self.marker.setAnimation(null);
-		infoWindow.close();
-	};	
 
 	// Content string of infowindow
 	var winContentStr = '<h3>' + '<a href=' + self.url + '>' + self.name + '</a>' + '</h3>' 

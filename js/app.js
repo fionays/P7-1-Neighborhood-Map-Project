@@ -49,7 +49,7 @@ var Place = function(data) {
 	};
 
 	// Content string of infowindow
-	var winContentStr = '<h3>' + '<a href=' + self.url + '>' + self.name + '</a>' + '</h3>' 
+	var winContentStr = '<h4>' + '<a href="' + self.url + '" target="_blank">' + self.name + '</a>' + '</h4>' 
 		+ '<p>price:<b>' + self.price + '</b>,rating:<b>' + self.rating + '</b></p>'	
 		+ '<p>' + self.location + '</p>';
 

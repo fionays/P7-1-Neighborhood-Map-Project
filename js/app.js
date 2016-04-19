@@ -53,7 +53,7 @@ var Place = function(data) {
 		+ '<p>price:<b>' + self.price + '</b>,rating:<b>' + self.rating + '</b></p>'	
 		+ '<p>' + self.location + '</p>';
 
-	// Define a inforWindow for this marker
+	// Define a infoWindow for this marker
 	var infoWindow = new google.maps.InfoWindow({
 			content: winContentStr
 	});
@@ -66,7 +66,7 @@ var Place = function(data) {
 };
 
 /*
-The ViewModel object whihc use Knockout.js to keep track of the states of
+The ViewModel object which use Knockout.js to keep track of the states of
 placeList object and each Place object themself.
 */
 var ViewModel = function() {
@@ -84,22 +84,15 @@ var ViewModel = function() {
     	var places = vm.placeList();
 
     	return ko.utils.arrayFilter(places, function(place) {
-    	var filtered = stringStartsWith(place.name.toLowerCase(), filter);
-    	if (filtered)
+    	var isFiltered = place.name.toLowerCase().includes(filter);
+    	if (isFiltered)
     		place.marker.setMap(map);
     	else
     		place.marker.setMap(null);
-    	return filtered;
+    	return isFiltered;
     	});
     	
    	 });
-
-    // Helper method. Return true if the string starts with the "startsWith" string
-	var stringStartsWith = function(string, startsWith) {
-		if (startsWith.length > string.length)
-			return false;
-		return string.substring(0, startsWith.length) === startsWith;
-	};
 
 	// Use HTML5 geolocation to get the current location.
 	// And make an ajax request to FourSquare API using that location

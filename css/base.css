@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.page-header {
+    margin-bottom: 0;
+}
+
+.nav>li {
+    color: #777;
+    position: relative;
+    display: block;
+    padding: 10px 15px 10px 15px;
+}
+
+.navbar-toggle {
+    float: left;
+    margin-left: 15px;
+}
+
+.nav>li:hover {
+    background: #bfbfbf;
+    color: white;
+}
+
+#map-wrap {
+    height: 100%; 
+}
+
+footer>p {
+    margin-bottom: 0;
+}
+
+#googleMap { 
+    height: 80%;
+    position: relative;
+}
+
+@media (min-width: 0) {
+    #menu {
+    width: 40%;
+    }
+
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 440px) {
+    #menu {
+    width: 27%;
+    }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+
+  #menu {
+    width: 20%;
+    }
+
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+}

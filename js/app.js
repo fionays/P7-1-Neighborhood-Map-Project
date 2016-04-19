@@ -1,3 +1,4 @@
+'use strict'; // Developer-to-developer tip
 
 var map = map || {};
 

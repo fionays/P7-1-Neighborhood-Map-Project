@@ -1,4 +1,4 @@
-/**/
+'use strict'; // Developer-to-developer top
 
 var map;
 /*
